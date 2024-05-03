@@ -1,6 +1,6 @@
 # helm-scenarios-charts
 
-export CHART_VERSION=1.9.0
+export CHART_VERSION=2.0.0
 helm package mock-app/.
 tar -tvf mock-app-${CHART_VERSION}.tgz
 

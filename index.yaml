@@ -3,7 +3,7 @@ entries:
   mock-app:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-05-27T10:26:09.225492+02:00"
+    created: "2024-05-27T10:32:07.001903+02:00"
     description: A Helm chart for Kubernetes
     digest: 606b780c3085c3a20ce442c86be2d3e9acf75e88fc004117077136a5a2ffc5ad
     name: mock-app
@@ -13,7 +13,7 @@ entries:
     version: 2.2.0
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-05-27T10:26:09.224921+02:00"
+    created: "2024-05-27T10:32:07.001233+02:00"
     description: A Helm chart for Kubernetes
     digest: 4247ac25928d1d0f6ef277ba9e109f2769a2133441d500e863e0ef1751b3ae24
     name: mock-app
@@ -23,7 +23,7 @@ entries:
     version: 2.1.0
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-05-27T10:26:09.224295+02:00"
+    created: "2024-05-27T10:32:07.000491+02:00"
     description: A Helm chart for Kubernetes
     digest: 7d459825df9a72d9735e3edc828f3764509d8f6cba9fe583d321f7371faf9e02
     name: mock-app
@@ -33,7 +33,7 @@ entries:
     version: 2.0.0
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-05-27T10:26:09.223235+02:00"
+    created: "2024-05-27T10:32:06.999763+02:00"
     description: A Helm chart for Kubernetes
     digest: 8f3ae6b107b2b91193f603033f17c00b6261a1e2ed360f71e10048a3c5d50249
     name: mock-app
@@ -43,7 +43,7 @@ entries:
     version: 1.9.0
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-05-27T10:26:09.221745+02:00"
+    created: "2024-05-27T10:32:06.998802+02:00"
     description: A Helm chart for Kubernetes
     digest: 0d2a1c722cbd3db37f895be231a80a52f87f2d7d08532d4198cad813a654d82f
     name: mock-app
@@ -54,12 +54,12 @@ entries:
   mock-app-canary:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-05-27T10:26:09.226237+02:00"
+    created: "2024-05-27T10:32:07.002629+02:00"
     description: A Helm chart for Kubernetes
-    digest: 6901400e7cd611f98cd06f4c87c30fd6b6ccd5917d03243d93c24fff7e8632c9
+    digest: 4c64d578c15947c52a569d978ad81d8cc95913fece4e1fe05cbd3477efe5578b
     name: mock-app-canary
     type: application
     urls:
     - https://benmalekarim.github.io/helm-scenarios-charts/mock-app-canary-1.0.0.tgz
     version: 1.0.0
-generated: "2024-05-27T10:26:09.220302+02:00"
+generated: "2024-05-27T10:32:06.997336+02:00"

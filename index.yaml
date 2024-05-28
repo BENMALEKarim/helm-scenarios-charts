@@ -3,7 +3,7 @@ entries:
   mock-app:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-05-28T22:57:23.542566+02:00"
+    created: "2024-05-28T22:57:52.299256+02:00"
     description: A Helm chart for Kubernetes
     digest: 606b780c3085c3a20ce442c86be2d3e9acf75e88fc004117077136a5a2ffc5ad
     name: mock-app
@@ -13,7 +13,7 @@ entries:
     version: 2.2.0
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-05-28T22:57:23.539697+02:00"
+    created: "2024-05-28T22:57:52.298824+02:00"
     description: A Helm chart for Kubernetes
     digest: 4247ac25928d1d0f6ef277ba9e109f2769a2133441d500e863e0ef1751b3ae24
     name: mock-app
@@ -23,7 +23,7 @@ entries:
     version: 2.1.0
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-05-28T22:57:23.536181+02:00"
+    created: "2024-05-28T22:57:52.298441+02:00"
     description: A Helm chart for Kubernetes
     digest: 7d459825df9a72d9735e3edc828f3764509d8f6cba9fe583d321f7371faf9e02
     name: mock-app
@@ -33,7 +33,7 @@ entries:
     version: 2.0.0
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-05-28T22:57:23.532197+02:00"
+    created: "2024-05-28T22:57:52.298056+02:00"
     description: A Helm chart for Kubernetes
     digest: 8f3ae6b107b2b91193f603033f17c00b6261a1e2ed360f71e10048a3c5d50249
     name: mock-app
@@ -43,7 +43,7 @@ entries:
     version: 1.9.0
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-05-28T22:57:23.528947+02:00"
+    created: "2024-05-28T22:57:52.297633+02:00"
     description: A Helm chart for Kubernetes
     digest: 0d2a1c722cbd3db37f895be231a80a52f87f2d7d08532d4198cad813a654d82f
     name: mock-app
@@ -54,9 +54,9 @@ entries:
   mock-app-blue-green:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-05-28T22:57:23.542964+02:00"
+    created: "2024-05-28T22:57:52.299737+02:00"
     description: A Helm chart for Kubernetes
-    digest: 724b1a1b215af88e40bd2c6c304246fe14a39f1ef7b41d0e32c701bdf45bdcec
+    digest: b80509365bddfbb6077cbc94a2378f6ebfef3010edf20768b6a30973c3f96e8f
     name: mock-app-blue-green
     type: application
     urls:
@@ -65,7 +65,7 @@ entries:
   mock-app-canary:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-05-28T22:57:23.546159+02:00"
+    created: "2024-05-28T22:57:52.300212+02:00"
     description: A Helm chart for Kubernetes
     digest: ff240dc85cd29a68b1c997a476e14f97ce793b250ff57a41129777a5d6bc5936
     name: mock-app-canary
@@ -73,4 +73,4 @@ entries:
     urls:
     - https://benmalekarim.github.io/helm-scenarios-charts/mock-app-canary-1.0.0.tgz
     version: 1.0.0
-generated: "2024-05-28T22:57:23.524651+02:00"
+generated: "2024-05-28T22:57:52.297057+02:00"

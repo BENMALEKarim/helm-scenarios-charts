@@ -1,0 +1,21 @@
+addons:
+  mock-app-test:
+    enabled: false
+    namespace: test
+    releaseName: mock-app-test
+    chart: mock-app
+    repoUrl: https://benmalekarim.github.io/helm-scenarios-charts/
+    targetRevision: "2.2.0"
+    values:
+      appName: mock-app-test
+      message: 'Addon mock-app-test ya jedek'
+  mock-app-testinho:
+    enabled: false
+    namespace: testinho
+    releaseName: mock-app-testinho
+    chart: mock-app
+    repoUrl: https://benmalekarim.github.io/helm-scenarios-charts/
+    targetRevision: "2.2.0"
+    values:
+      appName: mock-app-testinho
+      message: 'Heddi maderna welou'

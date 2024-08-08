@@ -10,6 +10,7 @@ spec:
   generators:
   - clusters:
       selector:
+        matchExpressions:
           - key: enable_{{ $name }}
             operator: In
             values: ['true']

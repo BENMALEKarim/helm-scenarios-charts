@@ -5,7 +5,7 @@ addons:
     chart: aws-load-balancer-controller
     repoUrl: https://aws.github.io/eks-charts
     targetRevision: "1.8.1"
-    namespace: '{{default "kube-system" (index .metadata.annotations "aws_load_balancer_controller_namespace")}}'
+    namespace: kube-system
     values:
       vpcId: '{{.metadata.annotations.aws_vpc_id}}'
       clusterName: '{{.metadata.annotations.aws_cluster_name}}'
@@ -16,7 +16,7 @@ addons:
   external_secrets:
     enabled: false
     releaseName: external-secrets
-    namespace: '{{default "external-secrets" (index .metadata.annotations "external_secrets_namespace")}}'
+    namespace: external-secrets
     chart: external-secrets
     repoUrl: https://charts.external-secrets.io
     targetRevision: "0.10.0"
@@ -29,7 +29,7 @@ addons:
   ingress_nginx:
     enabled: false
     releaseName: ingress-nginx
-    namespace: '{{default "ingress-nginx" (index .metadata.annotations "ingress_nginx_namespace")}}'
+    namespace: ingress-nginx
     chart: ingress-nginx
     repoUrl: https://kubernetes.github.io/ingress-nginx
     targetRevision: "4.11.1"

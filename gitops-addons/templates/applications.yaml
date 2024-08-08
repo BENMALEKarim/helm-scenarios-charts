@@ -1,9 +1,10 @@
 {{- range $name, $addon := .Values.addons }}
 {{- if $addon.enabled }}
+{{- $nameNormalize := printf "%s" $name | replace "_" "-" | trunc 63 | trimSuffix "-"  -}}
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: addon-{{ $name }}
+  name: addon-{{ $nameNormalize }}
   namespace: argocd
 spec:
   destination:

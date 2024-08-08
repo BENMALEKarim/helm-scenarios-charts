@@ -1,0 +1,45 @@
+addons:
+  aws_load_balancer_controller:
+    enabled: true
+    releaseName: aws-load-balancer-controller
+    chart: aws-load-balancer-controller
+    repoUrl: https://aws.github.io/eks-charts
+    targetRevision: "1.8.1"
+    namespace: '.metadata.annotations.aws_load_balancer_controller_namespace'
+    values:
+      vpcId: '{{.metadata.annotations.aws_vpc_id}}'
+      clusterName: '{{.metadata.annotations.aws_cluster_name}}'
+      serviceAccount:
+        name: '{{.metadata.annotations.aws_load_balancer_controller_service_account}}'
+        annotations:
+          eks.amazonaws.com/role-arn: '{{.metadata.annotations.aws_load_balancer_controller_iam_role_arn}}'
+  external_secrets:
+    enabled: false
+    releaseName: external-secrets
+    namespace: '{{.metadata.annotations.external_secrets_namespace}}'
+    chart: external-secrets
+    repoUrl: https://charts.external-secrets.io
+    targetRevision: "0.10.0"
+    values:
+      serviceAccount:
+        name: '{{.metadata.annotations.external_secrets_service_account}}'
+        annotations:
+          eks.amazonaws.com/role-arn: '{{.metadata.annotations.external_secrets_iam_role_arn}}'
+
+  ingress_nginx:
+    enabled: false
+    releaseName: ingress-nginx
+    namespace: '{{default "ingress-nginx" (index .metadata.annotations "ingress_nginx_namespace")}}'
+    chart: ingress-nginx
+    repoUrl: https://kubernetes.github.io/ingress-nginx
+    targetRevision: "4.11.1"
+    values:
+      controller:
+        service:
+          type: LoadBalancer
+          annotations:
+            service.beta.kubernetes.io/aws-load-balancer-nlb-target-type: ip
+            service.beta.kubernetes.io/aws-load-balancer-scheme: internet-facing
+          loadBalancerClass: service.k8s.aws/nlb
+
+  

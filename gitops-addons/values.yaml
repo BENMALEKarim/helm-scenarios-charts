@@ -5,7 +5,7 @@ addons:
     chart: aws-load-balancer-controller
     repoUrl: https://aws.github.io/eks-charts
     targetRevision: "1.8.1"
-    namespace: '.metadata.annotations.aws_load_balancer_controller_namespace'
+    namespace: '{{default "kube-system" (index .metadata.annotations "aws_load_balancer_controller_namespace")}}'
     values:
       vpcId: '{{.metadata.annotations.aws_vpc_id}}'
       clusterName: '{{.metadata.annotations.aws_cluster_name}}'
@@ -16,7 +16,7 @@ addons:
   external_secrets:
     enabled: false
     releaseName: external-secrets
-    namespace: '{{.metadata.annotations.external_secrets_namespace}}'
+    namespace: '{{default "external-secrets" (index .metadata.annotations "external_secrets_namespace")}}'
     chart: external-secrets
     repoUrl: https://charts.external-secrets.io
     targetRevision: "0.10.0"

@@ -3,7 +3,17 @@ entries:
   gitops-addons:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-08-08T12:27:18.600048+02:00"
+    created: "2024-08-08T15:52:42.595999+02:00"
+    description: A Helm chart for Kubernetes
+    digest: c6cc8b068ea3e78712ae247d79f49fa36a36d239f9fdd259d796c614a5e43ab9
+    name: gitops-addons
+    type: application
+    urls:
+    - https://benmalekarim.github.io/helm-scenarios-charts/gitops-addons-1.30.2.tgz
+    version: 1.30.2
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-08-08T15:52:42.595136+02:00"
     description: A Helm chart for Kubernetes
     digest: c903d20b4b1129abe5bf53019c378594059cc17d9d3811b318efa26b651a4437
     name: gitops-addons
@@ -13,7 +23,7 @@ entries:
     version: 1.30.1
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-08-08T12:27:18.599138+02:00"
+    created: "2024-08-08T15:52:42.589435+02:00"
     description: A Helm chart for Kubernetes
     digest: aa9133e72ef5ad80d435e6a503b50e20096d30547a7337e9429e685d7bc3be7b
     name: gitops-addons
@@ -24,7 +34,7 @@ entries:
   mock-app:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-08-08T12:27:18.628261+02:00"
+    created: "2024-08-08T15:52:42.619949+02:00"
     description: A Helm chart for Kubernetes
     digest: 606b780c3085c3a20ce442c86be2d3e9acf75e88fc004117077136a5a2ffc5ad
     name: mock-app
@@ -34,7 +44,7 @@ entries:
     version: 2.2.0
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-08-08T12:27:18.62357+02:00"
+    created: "2024-08-08T15:52:42.614863+02:00"
     description: A Helm chart for Kubernetes
     digest: 4247ac25928d1d0f6ef277ba9e109f2769a2133441d500e863e0ef1751b3ae24
     name: mock-app
@@ -44,7 +54,7 @@ entries:
     version: 2.1.0
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-08-08T12:27:18.617441+02:00"
+    created: "2024-08-08T15:52:42.61043+02:00"
     description: A Helm chart for Kubernetes
     digest: 7d459825df9a72d9735e3edc828f3764509d8f6cba9fe583d321f7371faf9e02
     name: mock-app
@@ -54,7 +64,7 @@ entries:
     version: 2.0.0
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-08-08T12:27:18.610445+02:00"
+    created: "2024-08-08T15:52:42.60541+02:00"
     description: A Helm chart for Kubernetes
     digest: 8f3ae6b107b2b91193f603033f17c00b6261a1e2ed360f71e10048a3c5d50249
     name: mock-app
@@ -64,7 +74,7 @@ entries:
     version: 1.9.0
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-08-08T12:27:18.606852+02:00"
+    created: "2024-08-08T15:52:42.600763+02:00"
     description: A Helm chart for Kubernetes
     digest: 0d2a1c722cbd3db37f895be231a80a52f87f2d7d08532d4198cad813a654d82f
     name: mock-app
@@ -75,7 +85,7 @@ entries:
   mock-app-blue-green:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-08-08T12:27:18.632161+02:00"
+    created: "2024-08-08T15:52:42.62465+02:00"
     description: A Helm chart for Kubernetes
     digest: b80509365bddfbb6077cbc94a2378f6ebfef3010edf20768b6a30973c3f96e8f
     name: mock-app-blue-green
@@ -86,7 +96,7 @@ entries:
   mock-app-canary:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-08-08T12:27:18.63708+02:00"
+    created: "2024-08-08T15:52:42.629752+02:00"
     description: A Helm chart for Kubernetes
     digest: ff240dc85cd29a68b1c997a476e14f97ce793b250ff57a41129777a5d6bc5936
     name: mock-app-canary
@@ -94,4 +104,4 @@ entries:
     urls:
     - https://benmalekarim.github.io/helm-scenarios-charts/mock-app-canary-1.0.0.tgz
     version: 1.0.0
-generated: "2024-08-08T12:27:18.591512+02:00"
+generated: "2024-08-08T15:52:42.584048+02:00"

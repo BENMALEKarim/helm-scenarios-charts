@@ -35,6 +35,10 @@ spec:
           valuesObject:
             {{- toYaml . | nindent 12 }}
           {{- end }}
+          ignoreMissingValueFiles: true
+          valueFiles:
+          - https://raw.githubusercontent.com/{{`{{.metadata.annotations.gitops_bridge_values_repo_username}}`}}/{{`{{.metadata.annotations.gitops_bridge_values_repo_name}}`}}/{{`{{.metadata.annotations.gitops_bridge_values_repo_branch}}`}}/gitops/tenants/{{`{{.metadata.annotations.gitops_bridge_tenant}}`}}/{{`{{.metadata.annotations.aws_cluster_name}}`}}/values.yaml
+          - https://raw.githubusercontent.com/{{`{{.metadata.annotations.gitops_bridge_values_repo_username}}`}}/{{`{{.metadata.annotations.gitops_bridge_values_repo_name}}`}}/{{`{{.metadata.annotations.gitops_bridge_values_repo_branch}}`}}/gitops/environments/{{`{{.metadata.annotations.environment}}`}}/values.yaml
       syncPolicy:
         automated:
           prune: true

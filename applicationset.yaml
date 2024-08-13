@@ -1,0 +1,52 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: gitops-addons-appset
+  namespace: argocd
+spec:
+  goTemplate: true
+  goTemplateOptions: ["missingkey=error"]
+  generators:
+  - clusters:
+      selector:
+        matchExpressions:
+          - key: cluster_name
+            operator: In
+            values: [in-cluster]
+  template:
+    metadata:
+      name: gitops-addons
+    spec:
+      destination:
+        server: "https://kubernetes.default.svc" 
+        namespace: argocd
+      project: default      
+      sources:
+      - repoURL: 'https://github.com/{{.metadata.annotations.gitops_bridge_values_repo_username}}/{{.metadata.annotations.gitops_bridge_values_repo_name}}.git'
+        targetRevision: '{{.metadata.annotations.gitops_bridge_values_repo_branch}}'
+        ref: values
+      - repoURL: 'https://benmalekarim.github.io/helm-scenarios-charts/' ## TO BE MODIFIED
+        chart: 'gitops-addons'
+        targetRevision: '1.30.0'
+        helm:
+          releaseName: gitops-addons
+          valuesObject:
+            addons:
+              aws_load_balancer_controller:
+                enabled: '{{.metadata.labels.enable_aws_load_balancer_controller}}'
+              external_secrets:
+                enabled: '{{.metadata.labels.enable_external_secrets}}'
+              aws_ingress_nginx:
+                enabled: '{{ .metadata.labels.enable_aws_ingress_nginx }}'
+          ignoreMissingValueFiles: true
+          valueFiles:
+              - $values/gitops/tenants/{{.metadata.annotations.gitops_bridge_tenant}}/{{.metadata.annotations.aws_cluster_name}}/values.yaml
+              - $values/gitops/environments/{{.metadata.annotations.environment}}/values.yaml
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
+        syncOptions:
+        - CreateNamespace=true
+
+
